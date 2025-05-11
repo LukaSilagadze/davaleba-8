@@ -1,6 +1,10 @@
-.container{
+.container {
     margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 
 /* 3D button */
 .button_div{
@@ -80,6 +84,18 @@
 
 /* flashing text */
 
-.flashing_text{
-    
+.flashing_text {
+    font-size: 140px;
+    color: red;
+    letter-spacing: 20px;
+    animation: flashingText 0.5s linear 0s infinite alternate forwards;
+}
+
+@keyframes flashingText {
+    0%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0%;
+    }
 }
