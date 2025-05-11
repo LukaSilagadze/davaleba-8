@@ -70,16 +70,16 @@
 }
 /* card hover */
 .card:hover{
-  box-shadow:
-    4px 0 10px 2px red,     /* right */
-    -4px 0 10px 2px red,    /* left */
-    0 4px 10px 2px red,     /* bottom */
-    0 -4px 10px 2px red;    /* top */ 
+    box-shadow:
+    4px 0 10px 2px red,
+    -4px 0 10px 2px red,
+    0 4px 10px 2px red,
+    0 -4px 10px 2px red;
     transform: scale(1.5);
     overflow: hidden;
 }
 .card:hover .img {
-  filter: grayscale(100%);
+    filter: grayscale(100%);
 }
 
 /* flashing text */
@@ -98,4 +98,68 @@
     100%{
         opacity: 0%;
     }
+}
+
+/* spinner */
+.spinner_ring{
+    width: 500px;
+    height: 500px;
+    border: 50px solid green;
+    border-top: 50px solid yellow;
+    border-right: 50px solid red;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+.spinner{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin-block: 200px;
+}
+.spinner_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: green;
+    font-size: 50px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg); /* Spins the ring */
+    }
+}
+.spinner_ring:hover{
+    animation-play-state: paused;
+}
+
+/* header */
+header{
+    width: min(100%, 1440px);
+    background-color: lightblue;
+    justify-content: center;
+}
+nav{
+    display: flex;
+    justify-content: center;
+}
+.header_ul{
+    display: flex;
+    column-gap: 30px;
+    flex-direction: row;
+}
+.header_a {
+    font-size: 40px;
+    color: white;
+    text-shadow: 3px 3px 3px black;
+    transition: 0.3s;
+}
+
+.header_a:hover {
+    text-shadow:
+            0 0 10px purple,
+            0 0 20px purple,
+            0 0 30px purple;
 }
