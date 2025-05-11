@@ -1,6 +1,8 @@
 .container{
     margin-top: 100px;
 }
+
+/* 3D button */
 .button_div{
     width: 500px;
     height: 200px;
@@ -10,7 +12,7 @@
     align-items: center;
     justify-content: center;
 }
-button{
+.button{
     display: block;
     margin: auto;
     border: none;
@@ -23,10 +25,61 @@ button{
     transition: all 0.2s ease;
     letter-spacing: 5px;
 }
-button:active {
+.button:active {
     transform: translate(0, 2px);
     box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.4), 1px 1px 2px rgba(255, 255, 255, 0.6);
     filter: brightness(0.95);
     text-shadow: 1px 1px 3px black;
 }
 
+/* card */
+.card{
+    margin: 300px auto;
+    padding: 10px;
+    width: 400px;
+    transition: 1s ease;
+}
+.img{
+    margin:  0 auto 20px;
+    transition: 1s ease;
+}
+.card_text{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.card_title{
+    font-size: 30px;
+    color: brown;
+}
+.price{
+    margin-top: 20px;
+    font-size: 24px;
+    color: red;
+}
+.add_button{
+    border: none;
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+/* card hover */
+.card:hover{
+  box-shadow:
+    4px 0 10px 2px red,     /* right */
+    -4px 0 10px 2px red,    /* left */
+    0 4px 10px 2px red,     /* bottom */
+    0 -4px 10px 2px red;    /* top */ 
+    transform: scale(1.5);
+    overflow: hidden;
+}
+.card:hover .img {
+  filter: grayscale(100%);
+}
+
+/* flashing text */
+
+.flashing_text{
+    
+}
