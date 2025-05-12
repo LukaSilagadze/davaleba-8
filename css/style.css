@@ -128,7 +128,7 @@
 
 @keyframes spin {
     to {
-        transform: rotate(360deg); /* Spins the ring */
+        transform: rotate(360deg);
     }
 }
 .spinner_ring:hover{
